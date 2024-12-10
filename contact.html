@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo1.png" alt="Logo" class="logo-img" width="100px">
+            </div>
+            <ul>
+                <li><a href="home.html" onclick="window.location.href='home.html'">A Propos</a></li>
+                <li><a href="portfolio.html" onclick="window.location.href='portfolio.html'">Portfolio</a></li>
+                <li><a href="contact.html" onclick="window.location.href='contact.html'" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-page">
+            <div class="contact-wrapper">
+                <h1>Contact</h1>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/meoqdqnj" method="POST">
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                placeholder="Votre nom"
+                                minlength="2"
+                                maxlength="50"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="Votre email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                required 
+                                placeholder="Sujet du message"
+                                minlength="3"
+                                maxlength="100"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required 
+                                placeholder="Votre message"
+                                minlength="10"
+                                maxlength="1000"
+                                rows="6"
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <span class="button-text">Envoyer</span>
+                            <span class="button-loading" style="display: none;">Envoi en cours...</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/el-ajmi-mosbah-333395295" class="social-link" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/ElAjmiMosbah" class="social-link" target="_blank">GitHub</a>
+                    <a href="#" class="social-link" target="_blank">Behance</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

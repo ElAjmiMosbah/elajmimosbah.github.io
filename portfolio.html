@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mes Travaux</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo1.png" alt="Logo" class="logo-img" width="100px">
+            </div>
+            <ul>
+                <li><a href="home.html" onclick="window.location.href='home.html'">A Propos</a></li>
+                <li><a href="portfolio.html" onclick="window.location.href='portfolio.html'">Portfolio</a></li>
+                <li><a href="contact.html" onclick="window.location.href='contact.html'">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-hero">
+            <h1>Mes Réalisations</h1>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="webdesign">Webdesign</button>
+                <button class="filter-btn" data-filter="graphisme">Graphisme</button>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <!-- Projets Webdesign -->
+            <article class="portfolio-item webdesign">
+                <div class="portfolio-image">
+                    <img src="images/projects/web1.jpg" alt="Projet Web 1">
+                    <div class="portfolio-overlay">
+                        <h3>Nom du Projet</h3>
+                        <p>Site Web E-commerce</p>
+                        <a href="#" class="portfolio-link">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Répéter pour chaque projet -->
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/projects/design1.jpg" alt="Projet Design 1">
+                    <div class="portfolio-overlay">
+                        <h3>Design Logo</h3>
+                        <p>Identité visuelle</p>
+                        <a href="#" class="portfolio-link">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/Projet1.png" alt="Illustration Dragoon FF14">
+                    <div class="portfolio-overlay">
+                        <h3>Dragoon FF14</h3>
+                        <p>Illustration Digitale</p>
+                        <a href="#" class="portfolio-link" data-project="dragoon">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/nirvana/RECTO N V.FINAL.png" alt="Réinterprétation Album Cover">
+                    <div class="portfolio-overlay">
+                        <h3>Réinterprétation Album</h3>
+                        <p>Design Graphique - Réinterprétation</p>
+                        <a href="#" class="portfolio-link" data-project="nirvana">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/blanket/RECTO N V1.png" alt="Réinterprétation Album Blanket">
+                    <div class="portfolio-overlay">
+                        <h3>Réinterprétation Album Blanket</h3>
+                        <p>Design Graphique - Réinterprétation</p>
+                        <a href="#" class="portfolio-link" data-project="blanket">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/felakuti/Plan de travail 1.png" alt="Réinterprétation Album Fela Kuti">
+                    <div class="portfolio-overlay">
+                        <h3>Réinterprétation Album Fela Kuti</h3>
+                        <p>Design Graphique - Réinterprétation</p>
+                        <a href="#" class="portfolio-link" data-project="felakuti">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/madonna/RECTO N V.FINAL.jpg" alt="Réinterprétation Album Madonna">
+                    <div class="portfolio-overlay">
+                        <h3>Réinterprétation Album Madonna</h3>
+                        <p>Design Graphique - Réinterprétation</p>
+                        <a href="#" class="portfolio-link" data-project="madonna">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/logo.png" alt="Logo Design 1">
+                    <div class="portfolio-overlay">
+                        <h3>Collection de Logos</h3>
+                        <p>Design Graphique - Identité Visuelle</p>
+                        <a href="#" class="portfolio-link" data-project="logos">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ajouter après les autres articles, avant "Ajouter d'autres projets ici" -->
+            <article class="portfolio-item graphisme">
+                <div class="portfolio-image">
+                    <img src="images/HitmanIllustration.png" alt="Illustration Hitman">
+                    <div class="portfolio-overlay">
+                        <h3>Hitman - Illustration</h3>
+                        <p>Illustration Digitale</p>
+                        <a href="#" class="portfolio-link" data-project="hitman">Voir le projet</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ajouter d'autres projets ici -->
+            
+
+        </section>
+
+        <!-- Modal pour afficher les détails du projet -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+
+                    
+                    <!-- Le contenu sera injecté dynamiquement via JavaScript -->
+                    <div class="project-details" id="dragoon-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Dragoon FF14 - Illustration Digitale</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-main-image">
+                                <img src="images/Projet1.png" alt="Dragoon FF14" class="full-image">
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Illustration digitale d'un Dragoon, la classe emblématique de Final Fantasy XIV. Cette création met en valeur le design caractéristique de l'armure et la posture dynamique du personnage.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Photoshop</li>
+                                            <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Illustration digitale</li>
+                                            <li>Digital painting</li>
+                                            <li>Character design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details" id="nirvana-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Réinterprétation Album - Design Graphique</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-gallery">
+                                <div class="project-main-image">
+                                    <img src="images/nirvana/RECTO N V.FINAL.png" alt="Version 1" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/nirvana/VERSO N V.FINAL.png" alt="Version 2" class="full-image">
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Projet de réinterprétation graphique explorant de nouvelles perspectives visuelles tout en respectant l'essence de l'œuvre originale.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Photoshop</li>
+                                            <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Composition digitale</li>
+                                            <li>Manipulation d'image</li>
+                                            <li>Design graphique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details" id="blanket-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Réinterprétation Album Blanket - Design Graphique</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-gallery">
+                                <div class="project-main-image">
+                                    <img src="images/blanket/RECTO N V1.png" alt="Version 1" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/blanket/Plan de travail 1.png" alt="Version 2" class="full-image">
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Projet de réinterprétation graphique explorant de nouvelles perspectives visuelles tout en respectant l'essence de l'œuvre originale.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Photoshop</li>
+                                            <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Composition digitale</li>
+                                            <li>Manipulation d'image</li>
+                                            <li>Design graphique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details" id="felakuti-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Réinterprétation Album Fela Kuti - Design Graphique</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-gallery">
+                                <div class="project-main-image">
+                                    <img src="images/felakuti/Plan de travail 1.png" alt="Version 1" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/felakuti/Plan de travail 2.png" alt="Version 2" class="full-image">
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Projet de réinterprétation graphique explorant de nouvelles perspectives visuelles tout en respectant l'essence de l'œuvre originale.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Photoshop</li>
+                                            <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Composition digitale</li>
+                                            <li>Manipulation d'image</li>
+                                            <li>Design graphique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details" id="madonna-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Réinterprétation Album Madonna - Design Graphique</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-gallery">
+                                <div class="project-main-image">
+                                    <img src="images/madonna/RECTO N V.FINAL.jpg" alt="Version 1" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/madonna/Plan de travail 1.png" alt="Version 2" class="full-image">
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Projet de réinterprétation graphique explorant de nouvelles perspectives visuelles tout en respectant l'essence de l'œuvre originale.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Photoshop</li>
+                                            <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Composition digitale</li>
+                                            <li>Manipulation d'image</li>
+                                            <li>Design graphique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details" id="logos-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Collection de Logos - Design Graphique</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-gallery">
+                                <div class="project-main-image">
+                                    <img src="images/logo.png" alt="Logo Version Noir" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/logo1111.png" alt="Logo Version Blanc" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/logo11.png" alt="Logo Couleur" class="full-image">
+                                </div>
+                                <div class="project-main-image">
+                                    <img src="images/logo1110.png" alt="Logo Couleur" class="full-image">
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Collection de logos créés pour des sociétés fictives, explorant différentes variations de couleurs et de compositions pour démontrer la polyvalence du design graphique.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Illustrator</li>
+                                            <li>Adobe Photoshop</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Design vectoriel</li>
+                                            <li>Typographie</li>
+                                            <li>Identité visuelle</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details" id="hitman-details" style="display: none;">
+                        <div class="project-header">
+                            <h2>Hitman - Illustration Digitale</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-main-image">
+                                <img src="images/HitmanIllustration.png" alt="Illustration Hitman" class="full-image">
+                            </div>
+                            <div class="project-description">
+                                <h3>À propos de ce projet</h3>
+                                <p>Illustration digitale inspirée de la série de jeux Hitman, représentant l'Agent 47 dans une composition noir et rouge saisissante. Le design met en avant le personnage iconique avec ses deux pistolets dans une pose dynamique, accompagné d'une typographie personnalisée et d'une description de l'agent, créant ainsi une affiche de style cinématographique. Le contraste entre le noir profond, le blanc et les accents rouges renforce l'atmosphère dramatique caractéristique de la franchise.</p>
+                                <div class="project-details-list">
+                                    <div class="detail-item">
+                                        <h4>Logiciels utilisés</h4>
+                                        <ul>
+                                            <li>Adobe Photoshop</li>
+                                            <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Techniques</h4>
+                                        <ul>
+                                            <li>Illustration digitale</li>
+                                            <li>Digital painting</li>
+                                            <li>Character design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
