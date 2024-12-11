@@ -91,14 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Effet de défilement fluide pour les liens de navigation
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            window.scrollTo({
-                top: targetSection.offsetTop - 80,
-                behavior: 'smooth'
-            });
+            // Vérifier si c'est un lien interne (commence par #)
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            // Si ce n'est pas un lien interne, laisse le comportement par défaut
         });
     });
 
