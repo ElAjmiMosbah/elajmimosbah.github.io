@@ -1253,4 +1253,201 @@ button[type="submit"].loading .button-loading {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Section Education */
+.education {
+    padding: 6rem 4rem;
+    text-align: center;
+    background: var(--background-color);
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.education-timeline::before {
+    display: none;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.education-date {
+    background: var(--gradient-blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    min-width: 140px;
+    text-align: center;
+}
+
+.education-content {
+    background: rgba(75, 94, 255, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.education-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.education-school {
+    font-size: 1rem;
+    opacity: 0.7;
+    color: #6c6c7d;
+}
+
+/* Media Query pour l'éducation sur mobile */
+@media (max-width: 768px) {
+    .education {
+        padding: 4rem 1rem;
+    }
+
+    .education-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .education-date {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .education-content {
+        padding: 1.2rem;
+    }
+
+    .education-content h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Dans la section hero, après le style de h1 */
+.job-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+}
+
+/* Ajuster pour mobile */
+@media (max-width: 768px) {
+    .job-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Section Experience */
+.experience {
+    padding: 6rem 4rem;
+    text-align: center;
+    background: var(--background-color);
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+}
+
+.experience-date {
+    background: var(--gradient-blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    min-width: 140px;
+    text-align: center;
+}
+
+.experience-content {
+    background: rgba(75, 94, 255, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.experience-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.experience-company {
+    font-size: 1rem;
+    opacity: 0.7;
+    color: #6c6c7d;
+    margin-bottom: 1rem;
+}
+
+.experience-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Media Query pour l'expérience sur mobile */
+@media (max-width: 768px) {
+    .experience {
+        padding: 4rem 1rem;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .experience-date {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .experience-content {
+        padding: 1.2rem;
+    }
+
+    .experience-content h3 {
+        font-size: 1rem;
+    }
 } 
