@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     };
 
-    // Ajouter l'écouteur d'événement pour le scroll
+    // Ajouter l'écouteur d'év��nement pour le scroll
     window.addEventListener('scroll', handleHeaderScroll);
 
     // Vérifier la position initiale au chargement
@@ -212,29 +212,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Retirer la classe active de tous les boutons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Ajouter la classe active au bouton cliqué
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
-
+            let visibleItems = 0;
+            
             portfolioItems.forEach(item => {
-                // Si le filtre est "all" ou si l'item correspond au filtre
                 if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                    item.style.display = 'block';
-                    // Animation optionnelle pour une transition en douceur
-                    item.style.opacity = '1';
-                    item.style.transform = 'scale(1)';
+                    item.style.display = '';  // Reset display pour la pagination
+                    visibleItems++;
                 } else {
-                    // Cache les éléments qui ne correspondent pas au filtre
                     item.style.display = 'none';
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
                 }
             });
+
+            // Réinitialiser la pagination après le filtrage
+            currentPage = 1;
+            
+            // Mettre à jour les boutons de pagination en fonction des éléments visibles
+            prevBtn.disabled = true;
+            nextBtn.disabled = visibleItems <= itemsPerPage;
+            
+            // Mettre à jour les numéros de page en fonction des éléments visibles
+            const totalPages = Math.ceil(visibleItems / itemsPerPage);
+            pageNumbers.innerHTML = '';
+            
+            if (totalPages > 1) {
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageNumber = document.createElement('span');
+                    pageNumber.classList.add('page-number');
+                    if (i === 1) pageNumber.classList.add('active');
+                    pageNumber.textContent = i;
+                    pageNumber.addEventListener('click', () => {
+                        currentPage = i;
+                        showFilteredPage(i, filterValue);
+                    });
+                    pageNumbers.appendChild(pageNumber);
+                }
+            }
+            
+            showFilteredPage(1, filterValue);
         });
     });
+
+    // Nouvelle fonction pour afficher les pages filtrées
+    function showFilteredPage(page, filterValue) {
+        const filteredItems = filterValue === 'all' 
+            ? Array.from(portfolioItems)
+            : Array.from(portfolioItems).filter(item => item.classList.contains(filterValue));
+            
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        portfolioItems.forEach(item => {
+            const isVisible = filterValue === 'all' || item.classList.contains(filterValue);
+            const inRange = filteredItems.indexOf(item) >= start && filteredItems.indexOf(item) < end;
+            item.classList.toggle('visible', isVisible && inRange);
+        });
+
+        // Mettre à jour l'état des boutons
+        prevBtn.disabled = page === 1;
+        nextBtn.disabled = page >= Math.ceil(filteredItems.length / itemsPerPage);
+
+        // Mettre à jour les numéros de page actifs
+        const pageNumbers = document.querySelectorAll('.page-number');
+        pageNumbers.forEach(num => {
+            num.classList.toggle('active', parseInt(num.textContent) === page);
+        });
+    }
 
     // Gestion du formulaire de contact
     const contactForm = document.getElementById('contactForm');
@@ -274,4 +320,89 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Gestion de la pagination du portfolio
+    const itemsPerPage = 6;
+    const paginationContainer = document.querySelector('.portfolio-pagination');
+    const pageNumbers = document.querySelector('.page-numbers');
+    const prevBtn = document.querySelector('.pagination-btn.prev');
+    const nextBtn = document.querySelector('.pagination-btn.next');
+    let currentPage = 1;
+
+    function showPage(page) {
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        portfolioItems.forEach((item, index) => {
+            item.classList.toggle('visible', index >= start && index < end);
+        });
+
+        // Mettre à jour l'état des boutons
+        prevBtn.disabled = page === 1;
+        nextBtn.disabled = page >= Math.ceil(portfolioItems.length / itemsPerPage);
+
+        // Mettre à jour les numéros de page
+        updatePageNumbers(page);
+    }
+
+    function updatePageNumbers(currentPage) {
+        const totalPages = Math.ceil(portfolioItems.length / itemsPerPage);
+        pageNumbers.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageNumber = document.createElement('span');
+            pageNumber.classList.add('page-number');
+            if (i === currentPage) pageNumber.classList.add('active');
+            pageNumber.textContent = i;
+            pageNumber.addEventListener('click', () => {
+                currentPage = i;
+                showPage(currentPage);
+            });
+            pageNumbers.appendChild(pageNumber);
+        }
+    }
+
+    // Initialiser la pagination
+    if (portfolioItems.length > 0) {
+        showPage(1);
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < Math.ceil(portfolioItems.length / itemsPerPage)) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+    }
+
+    // Ajouter au début du fichier, dans l'événement DOMContentLoaded
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('nav ul');
+
+    burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
+            burgerMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
 }); 

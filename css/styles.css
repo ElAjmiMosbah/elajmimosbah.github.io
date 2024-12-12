@@ -287,7 +287,6 @@ nav a.active::after {
     font-weight: 600;
     margin-bottom: 3rem;
     letter-spacing: 2px;
-    text-align: center;
 }
 
 .services-grid {
@@ -935,7 +934,7 @@ nav a.active::after {
 
 /* Styles pour la page contact */
 .contact-page {
-    padding: 8rem 4rem;
+    padding: 12rem 4rem 8rem;
     min-height: 100vh;
     background: var(--gradient-blue);
     display: flex;
@@ -1033,7 +1032,7 @@ button[type="submit"].loading .button-loading {
 
 @media (max-width: 768px) {
     .contact-page {
-        padding: 6rem 2rem;
+        padding: 10rem 2rem 6rem;
     }
 
     .contact-wrapper h1 {
@@ -1066,5 +1065,192 @@ button[type="submit"].loading .button-loading {
     .service-card {
         width: 100%;
         max-width: 500px;
+    }
+}
+
+/* Style pour la pagination */
+.portfolio-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.pagination-btn {
+    padding: 0.5rem 1rem;
+    background-color: #4B5EFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-number {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.page-number.active {
+    background-color: #4B5EFF;
+    color: white;
+}
+
+/* Masquer les éléments du portfolio qui ne sont pas dans la page courante */
+.portfolio-item {
+    display: none;
+}
+
+.portfolio-item.visible {
+    display: block;
+}
+
+/* Styles pour le menu burger */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Navigation mobile */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    /* Animation du burger menu */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Ajustements pour le portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .portfolio-hero {
+        padding: 6rem 2rem 2rem;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio-filters {
+        flex-wrap: wrap;
+    }
+
+    /* Ajustements pour les filtres */
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajustements responsifs supplémentaires */
+@media (max-width: 768px) {
+    /* Formulaire de contact */
+    .contact-page {
+        padding: 8rem 1.5rem 4rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    /* Modal de projet */
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pagination */
+    .portfolio-pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .page-numbers {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    /* Ajustements généraux */
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Ajustements pour les tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 } 
