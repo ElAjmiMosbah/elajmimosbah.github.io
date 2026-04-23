@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mosbah El-Ajmi | Web Designer & Developer</title>
+    <title>Mosbah El-Ajmi | Portfolio Creatif</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="page-shell">
-        <div class="noise-layer" aria-hidden="true"></div>
+        <div class="texture texture-a" aria-hidden="true"></div>
+        <div class="texture texture-b" aria-hidden="true"></div>
 
         <nav class="navbar">
-            <div class="container">
+            <div class="container nav-row">
                 <a href="#accueil" class="nav-brand">
                     <span class="brand-mark">
                         <img src="images/projects/logo.png" alt="Logo El-Ajmi">
@@ -27,7 +28,6 @@
                     <li><a href="#apropos">A propos</a></li>
                     <li><a href="#competences">Skills</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#services">Services</a></li>
                     <li><a href="#projets">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -36,242 +36,213 @@
 
         <main>
             <section id="accueil" class="hero">
-                <div class="container hero-grid">
+                <div class="container hero-layout">
                     <div class="hero-copy reveal">
-                        <p class="eyebrow">Web Developer & Web Designer</p>
-                        <h1>Mosbah El-Ajmi, createur d'experiences web et graphiques.</h1>
+                        <span class="hero-kicker">Portfolio creatif 2026</span>
+                        <p class="hero-eyebrow">Web designer, graphiste et developpeur front-end</p>
+                        <h1>Je fabrique des sites qui ressemblent a des affiches vivantes.</h1>
                         <p class="hero-text">
-                            Passionne par la creation numerique, je developpe des interfaces, des identites visuelles
-                            et des projets web ou chaque detail traduit une vision artistique claire.
+                            J'aime les interfaces qui surprennent, les compositions qui racontent quelque chose
+                            et les details qui donnent a une marque une vraie presence visuelle.
                         </p>
 
                         <div class="hero-actions">
-                            <a href="#projets" class="btn btn-primary">Voir portfolio</a>
-                            <a href="#contact" class="btn btn-secondary">Me contacter</a>
-                        </div>
-
-                        <div class="hero-metrics">
-                            <div class="metric-card">
-                                <strong>Design + Code</strong>
-                                <span>une double approche entre graphisme, UI et developpement web</span>
-                            </div>
-                            <div class="metric-card">
-                                <strong>Adobe / Web</strong>
-                                <span>Illustrator, Photoshop, WordPress, JavaScript, React</span>
-                            </div>
+                            <a href="#projets" class="btn btn-primary">Explorer mes projets</a>
+                            <a href="#contact" class="btn btn-ghost">Demarrer un projet</a>
                         </div>
                     </div>
 
-                    <div class="hero-art reveal reveal-delay-1" aria-hidden="true">
-                        <div class="fractal-frame">
-                            <div class="fractal-orbit orbit-a"></div>
-                            <div class="fractal-orbit orbit-b"></div>
-                            <div class="hero-image-wrap">
-                                <img src="images/Capture%20d%E2%80%99%C3%A9cran%202026-01-07%20183550.png" alt="Portrait de Mosbah El-Aimi" class="hero-image">
-                            </div>
+                    <div class="hero-stage reveal reveal-delay-1">
+                        <div class="hero-photo-card">
+                            <img src="images/Capture%20d%E2%80%99%C3%A9cran%202026-01-07%20183550.png" alt="Portrait de Mosbah El-Ajmi" class="hero-image">
                         </div>
+
+                        <div class="hero-note note-a">
+                            <span>Designer + code</span>
+                            <strong>Graphic thinking / digital execution</strong>
+                        </div>
+
+                        <div class="hero-note note-b">
+                            <span>Based in Belgium</span>
+                            <strong>Branding, UI, front-end</strong>
+                        </div>
+
+                        <div class="hero-sticker sticker-a">UI</div>
+                        <div class="hero-sticker sticker-b">WEB</div>
+                        <div class="hero-orbit orbit-a" aria-hidden="true"></div>
+                        <div class="hero-orbit orbit-b" aria-hidden="true"></div>
                     </div>
                 </div>
             </section>
 
             <section id="apropos" class="about section">
-                <div class="container about-showcase">
-                    <div class="about-pitch reveal">
-                        <p class="eyebrow">A propos</p>
-                        <h2>Je relie l'univers graphique et le developpement web.</h2>
+                <div class="container about-layout">
+                    <div class="about-header reveal">
+                        <p class="section-label">A propos</p>
+                        <h2>Je combine instinct graphique, narration visuelle et execution web.</h2>
+                    </div>
+
+                    <div class="about-manifesto reveal reveal-delay-1">
                         <p>
-                            Mon avantage, c'est de comprendre a la fois l'image, l'interface et la construction technique.
-                            Je peux penser une identite visuelle, imaginer l'experience utilisateur et la traduire en site
-                            moderne, responsive et vivant.
+                            Je ne cherche pas a produire des sites sages. Je prefere des experiences qui ont un rythme,
+                            une attitude, une vraie silhouette. Mon travail se situe entre l'affiche, l'interface et le
+                            prototype vivant.
                         </p>
                     </div>
 
-                    <div class="about-proof-panel reveal reveal-delay-1">
-                        <article class="proof-item">
+                    <div class="about-values reveal reveal-delay-2">
+                        <article class="value-chip">
                             <span>01</span>
-                            <div>
-                                <h3>Vision graphique</h3>
-                                <p>Je ne construis pas seulement des pages: je cherche une direction visuelle identifiable.</p>
-                            </div>
+                            <p>Une direction visuelle reconnaissable des le premier ecran.</p>
                         </article>
-
-                        <article class="proof-item">
+                        <article class="value-chip">
                             <span>02</span>
-                            <div>
-                                <h3>Sens du web</h3>
-                                <p>Chaque ecran doit etre clair, responsive et agreable a parcourir, autant sur desktop que mobile.</p>
-                            </div>
+                            <p>Des interfaces lisibles, mobiles et construites pour vivre en ligne.</p>
                         </article>
-
-                        <article class="proof-item">
+                        <article class="value-chip">
                             <span>03</span>
-                            <div>
-                                <h3>Execution concrete</h3>
-                                <p>Je peux passer de l'idee a une interface integree avec HTML, CSS, JavaScript ou React.</p>
-                            </div>
+                            <p>Une execution concrete, du concept graphique a l'integration.</p>
                         </article>
                     </div>
                 </div>
             </section>
 
-            <section id="competences" class="competences section">
+            <section id="competences" class="skills section">
                 <div class="container">
-                    <div class="section-heading reveal">
-                        <p class="eyebrow">Skills</p>
-                        <h2>Un set de competences oriente design, front-end et creation digitale.</h2>
+                    <div class="section-head reveal">
+                        <p class="section-label">Skills</p>
+                        <h2>Des outils et techniques que j'utilise comme une palette.</h2>
                     </div>
 
-                    <div class="skills-grid">
-                        <article class="skill-card reveal">
-                            <div class="skill-top">
+                    <div class="skills-wall">
+                        <article class="skill-tile reveal">
+                            <div class="skill-meta">
                                 <i class="fas fa-pen-nib"></i>
-                                <span>70%</span>
+                                <span class="tile-index">70%</span>
                             </div>
                             <h3>Illustrator</h3>
-                            <p>Creation vectorielle, logos, pictogrammes et systemes graphiques.</p>
+                            <p>Logos, systemes visuels, composition vectorielle.</p>
                             <div class="skill-track"><div class="skill-progress" data-width="70%"></div></div>
                         </article>
 
-                        <article class="skill-card reveal reveal-delay-1">
-                            <div class="skill-top">
+                        <article class="skill-tile reveal reveal-delay-1 alt">
+                            <div class="skill-meta">
                                 <i class="fas fa-layer-group"></i>
-                                <span>70%</span>
+                                <span class="tile-index">70%</span>
                             </div>
                             <h3>Photoshop</h3>
-                            <p>Retouche, composition visuelle, assets web et univers graphiques.</p>
+                            <p>Retouche, collage digital, images de campagne et affiches.</p>
                             <div class="skill-track"><div class="skill-progress" data-width="70%"></div></div>
                         </article>
 
-                        <article class="skill-card reveal reveal-delay-2">
-                            <div class="skill-top">
-                                <i class="fab fa-python"></i>
-                                <span>65%</span>
-                            </div>
-                            <h3>Python</h3>
-                            <p>Logique de programmation, scripts, bases techniques et automatisation.</p>
-                            <div class="skill-track"><div class="skill-progress" data-width="65%"></div></div>
-                        </article>
-
-                        <article class="skill-card reveal">
-                            <div class="skill-top">
-                                <i class="fab fa-wordpress"></i>
-                                <span>60%</span>
-                            </div>
-                            <h3>WordPress</h3>
-                            <p>Sites vitrines, personnalisation de themes et gestion de contenu.</p>
-                            <div class="skill-track"><div class="skill-progress" data-width="60%"></div></div>
-                        </article>
-
-                        <article class="skill-card reveal reveal-delay-1">
-                            <div class="skill-top">
+                        <article class="skill-tile reveal reveal-delay-2 tall">
+                            <div class="skill-meta">
                                 <i class="fab fa-js"></i>
-                                <span>75%</span>
+                                <span class="tile-index">75%</span>
                             </div>
                             <h3>JavaScript</h3>
-                            <p>Interactions, animations, logique front-end et dynamisation d'interfaces.</p>
+                            <p>Interactions, animations, dynamique front-end et experiences vivantes.</p>
                             <div class="skill-track"><div class="skill-progress" data-width="75%"></div></div>
                         </article>
 
-                        <article class="skill-card reveal reveal-delay-2">
-                            <div class="skill-top">
+                        <article class="skill-tile reveal">
+                            <div class="skill-meta">
                                 <i class="fab fa-html5"></i>
-                                <span>80%</span>
+                                <span class="tile-index">80%</span>
                             </div>
-                            <h3>HTML5</h3>
-                            <p>Structure semantique, pages propres et bases solides pour le responsive.</p>
+                            <h3>HTML / CSS</h3>
+                            <p>Structures solides, layouts expressifs et responsive design.</p>
                             <div class="skill-track"><div class="skill-progress" data-width="80%"></div></div>
                         </article>
 
-                        <article class="skill-card reveal">
-                            <div class="skill-top">
-                                <i class="fab fa-css3-alt"></i>
-                                <span>70%</span>
-                            </div>
-                            <h3>CSS3</h3>
-                            <p>Mise en page moderne, design responsive, effets visuels et animations.</p>
-                            <div class="skill-track"><div class="skill-progress" data-width="70%"></div></div>
-                        </article>
-
-                        <article class="skill-card reveal reveal-delay-1">
-                            <div class="skill-top">
+                        <article class="skill-tile reveal reveal-delay-1">
+                            <div class="skill-meta">
                                 <i class="fab fa-react"></i>
-                                <span>65%</span>
+                                <span class="tile-index">65%</span>
                             </div>
                             <h3>React</h3>
-                            <p>Composants, interfaces modulaires et bases d'applications web modernes.</p>
+                            <p>Composants, logique UI et interfaces modulaires modernes.</p>
                             <div class="skill-track"><div class="skill-progress" data-width="65%"></div></div>
+                        </article>
+
+                        <article class="skill-tile reveal reveal-delay-2 alt">
+                            <div class="skill-meta">
+                                <i class="fas fa-code-branch"></i>
+                                <span class="tile-index">62%</span>
+                            </div>
+                            <h3>WordPress / Python</h3>
+                            <p>Outils de production, logique technique et polyvalence projet.</p>
+                            <div class="skill-track"><div class="skill-progress" data-width="62%"></div></div>
                         </article>
                     </div>
                 </div>
             </section>
 
             <section id="education" class="education section">
-                <div class="container education-grid">
-                    <div class="section-heading reveal">
-                        <p class="eyebrow">Education</p>
-                        <h2>Un parcours qui relie informatique, webdesign et culture digitale.</h2>
+                <div class="container education-layout">
+                    <div class="section-head reveal">
+                        <p class="section-label">Education</p>
+                        <h2>Un parcours entre informatique, webdesign et culture visuelle.</h2>
                     </div>
 
-                    <div class="timeline">
-                        <article class="timeline-item reveal">
-                            <span class="timeline-year">2024-2025</span>
-                            <div>
-                                <h3>Formation Webdesign</h3>
-                                <p>SJB-Wavre</p>
-                            </div>
+                    <div class="timeline-flow">
+                        <article class="timeline-card reveal">
+                            <span class="edu-year">2024 / 2025</span>
+                            <h3>Formation Webdesign</h3>
+                            <p>SJB-Wavre</p>
                         </article>
 
-                        <article class="timeline-item reveal reveal-delay-1">
-                            <span class="timeline-year">2021-2024</span>
-                            <div>
-                                <h3>Bachelier en Technologie de l'informatique</h3>
-                                <p>EPHEC</p>
-                            </div>
+                        <article class="timeline-card reveal reveal-delay-1">
+                            <span class="edu-year">2021 / 2024</span>
+                            <h3>Bachelier en Technologie de l'informatique</h3>
+                            <p>EPHEC</p>
                         </article>
 
-                        <article class="timeline-item reveal reveal-delay-2">
-                            <span class="timeline-year">2020-2021</span>
-                            <div>
-                                <h3>Bachelier Sciences informatique</h3>
-                                <p>UCLouvain</p>
-                            </div>
+                        <article class="timeline-card reveal reveal-delay-2">
+                            <span class="edu-year">2020 / 2021</span>
+                            <h3>Bachelier Sciences informatique</h3>
+                            <p>UCLouvain</p>
                         </article>
 
-                        <article class="timeline-item reveal">
-                            <span class="timeline-year">2017-2019</span>
-                            <div>
-                                <h3>Bachelier Sciences Economiques</h3>
-                                <p>UCLouvain</p>
-                            </div>
+                        <article class="timeline-card reveal">
+                            <span class="edu-year">2017 / 2019</span>
+                            <h3>Bachelier Sciences Economiques</h3>
+                            <p>UCLouvain</p>
                         </article>
                     </div>
                 </div>
             </section>
 
             <section id="services" class="services section">
-                <div class="container">
-                    <div class="section-heading reveal">
-                        <p class="eyebrow">Services</p>
-                        <h2>Des services pour donner vie a une presence visuelle et web coherente.</h2>
+                <div class="container services-layout">
+                    <div class="section-head reveal">
+                        <p class="section-label">Services</p>
+                        <h2>Des formats de collaboration construits pour marquer visuellement.</h2>
                     </div>
 
-                    <div class="services-grid">
-                        <article class="service-card reveal">
-                            <span class="service-index">A</span>
-                            <h3>Design UI/UX</h3>
-                            <p>Creez des experiences utilisateur fluides et intuitives grace a des interfaces modernes et ergonomiques adaptees a vos besoins.</p>
+                    <div class="services-ribbon">
+                        <article class="service-strip reveal">
+                            <span>01</span>
+                            <div>
+                                <h3>Design UI / UX</h3>
+                                <p>Interfaces claires, expressives et pensees pour les usages reels.</p>
+                            </div>
                         </article>
 
-                        <article class="service-card reveal reveal-delay-1">
-                            <span class="service-index">B</span>
-                            <h3>Design de site web</h3>
-                            <p>Donnez vie a votre presence en ligne avec des sites web elegants, performants et concus sur mesure pour votre marque.</p>
+                        <article class="service-strip reveal reveal-delay-1">
+                            <span>02</span>
+                            <div>
+                                <h3>Web design sur mesure</h3>
+                                <p>Landing pages, portfolios et vitrines avec une vraie direction artistique.</p>
+                            </div>
                         </article>
 
-                        <article class="service-card reveal reveal-delay-2">
-                            <span class="service-index">C</span>
-                            <h3>Identite visuelle</h3>
-                            <p>Affirmez votre marque avec une identite visuelle unique et memorable incluant logo, typographie et palette de couleurs.</p>
+                        <article class="service-strip reveal reveal-delay-2">
+                            <span>03</span>
+                            <div>
+                                <h3>Identite visuelle</h3>
+                                <p>Logos, compositions et systemes visuels pour exister avec plus de force.</p>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -279,15 +250,17 @@
 
             <section id="projets" class="projects section">
                 <div class="container">
-                    <div class="section-heading reveal">
-                        <p class="eyebrow">Portfolio</p>
-                        <h2>Mes realisations graphiques et web, organisees comme une galerie interactive.</h2>
-                    </div>
+                    <div class="projects-head reveal">
+                        <div class="section-head">
+                            <p class="section-label">Portfolio</p>
+                            <h2>Une galerie de projets entre webdesign, illustration et graphisme.</h2>
+                        </div>
 
-                    <div class="portfolio-filters reveal">
-                        <button class="filter-btn active" type="button" data-filter="all">Tous</button>
-                        <button class="filter-btn" type="button" data-filter="webdesign">Webdesign</button>
-                        <button class="filter-btn" type="button" data-filter="graphisme">Graphisme</button>
+                        <div class="portfolio-filters">
+                            <button class="filter-btn active" type="button" data-filter="all">Tous</button>
+                            <button class="filter-btn" type="button" data-filter="webdesign">Webdesign</button>
+                            <button class="filter-btn" type="button" data-filter="graphisme">Graphisme</button>
+                        </div>
                     </div>
 
                     <div class="carousel-shell reveal">
@@ -297,101 +270,113 @@
 
                         <div class="projects-viewport">
                             <div class="projects-grid">
-                        <article class="project-card reveal" data-category="webdesign">
-                            <div class="project-visual">
-                                <img src="images/projects/hikari/hikari-preview.jpg" alt="Hikari Restaurant Website" loading="lazy" decoding="async">
-                                <span>Webdesign</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Hikari Restaurant</h3>
-                                <p>Site web vitrine realise en collaboration pour un restaurant japonais fusion.</p>
-                                <button class="project-link" type="button" data-project="hikari">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal" data-category="webdesign">
+                                    <div class="project-visual">
+                                        <img src="images/projects/soda/canbox.png" alt="Soda Infinite" loading="lazy" decoding="async">
+                                        <span>Webdesign</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Soda Infinite</h3>
+                                        <p>Fausse marque de boisson imaginee de A a Z, de la direction artistique jusqu'au site web.</p>
+                                        <button class="project-link" type="button" data-project="soda">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal reveal-delay-1" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/projet1-optimized.jpg" alt="Illustration Dragoon FF14" loading="lazy" decoding="async">
-                                <span>Illustration</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Dragoon FF14</h3>
-                                <p>Illustration digitale inspiree de Final Fantasy XIV, entre character design et digital painting.</p>
-                                <button class="project-link" type="button" data-project="dragoon">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal" data-category="webdesign">
+                                    <div class="project-visual">
+                                        <img src="images/projects/hikari/hikari-preview.jpg" alt="Hikari Restaurant Website" loading="lazy" decoding="async">
+                                        <span>Webdesign</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Hikari Restaurant</h3>
+                                        <p>Site vitrine cree en collaboration pour un restaurant japonais fusion.</p>
+                                        <button class="project-link" type="button" data-project="hikari">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal reveal-delay-2" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/nirvana/recto-final-optimized.jpg" alt="Reinterpretation album Nirvana" loading="lazy" decoding="async">
-                                <span>Graphisme</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Reinterpretation Album</h3>
-                                <p>Exploration graphique autour d'une pochette d'album, entre composition et manipulation d'image.</p>
-                                <button class="project-link" type="button" data-project="nirvana">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal reveal-delay-1" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/projet1-optimized.jpg" alt="Illustration Dragoon FF14" loading="lazy" decoding="async">
+                                        <span>Illustration</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Dragoon FF14</h3>
+                                        <p>Illustration digitale inspiree de Final Fantasy XIV, entre character design et digital painting.</p>
+                                        <button class="project-link" type="button" data-project="dragoon">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/blanket/recto-v1-optimized.jpg" alt="Reinterpretation album Blanket" loading="lazy" decoding="async">
-                                <span>Graphisme</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Reinterpretation Album Blanket</h3>
-                                <p>Variation graphique d'album avec travail de composition, couleurs et atmosphere visuelle.</p>
-                                <button class="project-link" type="button" data-project="blanket">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal reveal-delay-2" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/nirvana/recto-final-optimized.jpg" alt="Reinterpretation album Nirvana" loading="lazy" decoding="async">
+                                        <span>Graphisme</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Reinterpretation Album</h3>
+                                        <p>Exploration graphique autour d'une pochette d'album, entre composition et manipulation d'image.</p>
+                                        <button class="project-link" type="button" data-project="nirvana">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal reveal-delay-1" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/felakuti/plan-travail-1-optimized.jpg" alt="Reinterpretation album Fela Kuti" loading="lazy" decoding="async">
-                                <span>Graphisme</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Reinterpretation Album Fela Kuti</h3>
-                                <p>Relecture visuelle d'un univers musical avec composition digitale et direction graphique.</p>
-                                <button class="project-link" type="button" data-project="felakuti">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/blanket/recto-v1-optimized.jpg" alt="Reinterpretation album Blanket" loading="lazy" decoding="async">
+                                        <span>Graphisme</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Reinterpretation Album Blanket</h3>
+                                        <p>Variation graphique d'album avec travail de composition, couleurs et atmosphere visuelle.</p>
+                                        <button class="project-link" type="button" data-project="blanket">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal reveal-delay-2" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/madonna/recto-final-optimized.jpg" alt="Reinterpretation album Madonna" loading="lazy" decoding="async">
-                                <span>Graphisme</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Reinterpretation Album Madonna</h3>
-                                <p>Creation graphique autour d'une pochette revisitee avec retouche et composition digitale.</p>
-                                <button class="project-link" type="button" data-project="madonna">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal reveal-delay-1" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/felakuti/plan-travail-1-optimized.jpg" alt="Reinterpretation album Fela Kuti" loading="lazy" decoding="async">
+                                        <span>Graphisme</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Reinterpretation Album Fela Kuti</h3>
+                                        <p>Relecture visuelle d'un univers musical avec composition digitale et direction graphique.</p>
+                                        <button class="project-link" type="button" data-project="felakuti">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/logo.png" alt="Collection de logos" loading="lazy" decoding="async">
-                                <span>Identite</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Collection de Logos</h3>
-                                <p>Logos fictifs et variations graphiques pour explorer la typographie et l'identite visuelle.</p>
-                                <button class="project-link" type="button" data-project="logos">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal reveal-delay-2" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/madonna/recto-final-optimized.jpg" alt="Reinterpretation album Madonna" loading="lazy" decoding="async">
+                                        <span>Graphisme</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Reinterpretation Album Madonna</h3>
+                                        <p>Creation graphique autour d'une pochette revisitee avec retouche et composition digitale.</p>
+                                        <button class="project-link" type="button" data-project="madonna">Voir le projet</button>
+                                    </div>
+                                </article>
 
-                        <article class="project-card reveal reveal-delay-1" data-category="graphisme">
-                            <div class="project-visual">
-                                <img src="images/projects/hitman-optimized.jpg" alt="Illustration Hitman" loading="lazy" decoding="async">
-                                <span>Illustration</span>
-                            </div>
-                            <div class="project-body">
-                                <h3>Hitman - Illustration</h3>
-                                <p>Affiche digitale inspiree de l'Agent 47, avec contraste noir, blanc et rouge.</p>
-                                <button class="project-link" type="button" data-project="hitman">Voir le projet</button>
-                            </div>
-                        </article>
+                                <article class="project-card reveal" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/logo.png" alt="Collection de logos" loading="lazy" decoding="async">
+                                        <span>Identite</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Collection de Logos</h3>
+                                        <p>Logos fictifs et variations graphiques pour explorer la typographie et l'identite visuelle.</p>
+                                        <button class="project-link" type="button" data-project="logos">Voir le projet</button>
+                                    </div>
+                                </article>
+
+                                <article class="project-card reveal reveal-delay-1" data-category="graphisme">
+                                    <div class="project-visual">
+                                        <img src="images/projects/hitman-optimized.jpg" alt="Illustration Hitman" loading="lazy" decoding="async">
+                                        <span>Illustration</span>
+                                    </div>
+                                    <div class="project-body">
+                                        <h3>Hitman - Illustration</h3>
+                                        <p>Affiche digitale inspiree de l'Agent 47, avec contraste noir, blanc et rouge.</p>
+                                        <button class="project-link" type="button" data-project="hitman">Voir le projet</button>
+                                    </div>
+                                </article>
                             </div>
                         </div>
 
@@ -410,7 +395,7 @@
 
                     <article class="project-details" id="hikari-details">
                         <div class="project-header">
-                            <p class="eyebrow">Webdesign</p>
+                            <p class="section-label">Webdesign</p>
                             <h2>Hikari Restaurant - Site Web Vitrine</h2>
                         </div>
                         <div class="project-content">
@@ -429,9 +414,31 @@
                         </div>
                     </article>
 
+                    <article class="project-details" id="soda-details">
+                        <div class="project-header">
+                            <p class="section-label">Webdesign / Brand concept</p>
+                            <h2>Soda Infinite</h2>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-gallery">
+                                <img data-src="images/projects/soda/canbox.png" alt="Gamme Soda Infinite">
+                                <img data-src="images/projects/soda/boisson1.png" alt="Canette Soda Infinite">
+                                <img data-src="images/projects/soda/mixercolor-1.png" alt="Mixomatic Soda Infinite">
+                                <img data-src="images/projects/soda/logo.png" alt="Logo Soda Infinite">
+                            </div>
+                            <div class="project-description">
+                                <p>Soda Infinite est une fausse marque de boisson que j'ai concue de A a Z. J'ai imagine la direction artistique, les produits, l'univers de marque ainsi que le site web de presentation pour donner a l'ensemble une identite complete et credible.</p>
+                                <a href="https://sodainfinite.netlify.app/" target="_blank" rel="noreferrer" class="project-link">Voir le site en ligne</a>
+                                <div class="project-tags">
+                                    <span>Direction artistique</span><span>Brand concept</span><span>Web design</span><span>Front-end</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                     <article class="project-details" id="dragoon-details">
                         <div class="project-header">
-                            <p class="eyebrow">Illustration digitale</p>
+                            <p class="section-label">Illustration digitale</p>
                             <h2>Dragoon FF14</h2>
                         </div>
                         <div class="project-content">
@@ -449,7 +456,7 @@
 
                     <article class="project-details" id="nirvana-details">
                         <div class="project-header">
-                            <p class="eyebrow">Design graphique</p>
+                            <p class="section-label">Design graphique</p>
                             <h2>Reinterpretation Album</h2>
                         </div>
                         <div class="project-content">
@@ -468,7 +475,7 @@
 
                     <article class="project-details" id="blanket-details">
                         <div class="project-header">
-                            <p class="eyebrow">Design graphique</p>
+                            <p class="section-label">Design graphique</p>
                             <h2>Reinterpretation Album Blanket</h2>
                         </div>
                         <div class="project-content">
@@ -487,7 +494,7 @@
 
                     <article class="project-details" id="felakuti-details">
                         <div class="project-header">
-                            <p class="eyebrow">Design graphique</p>
+                            <p class="section-label">Design graphique</p>
                             <h2>Reinterpretation Album Fela Kuti</h2>
                         </div>
                         <div class="project-content">
@@ -496,7 +503,7 @@
                                 <img data-src="images/projects/felakuti/Plan de travail 2.png" alt="Album Fela Kuti verso">
                             </div>
                             <div class="project-description">
-                                <p>Exploration visuelle d'un univers musical avec une composition graphique expressive et une approche poster/album cover.</p>
+                                <p>Exploration visuelle d'un univers musical avec une composition graphique expressive et une approche poster / album cover.</p>
                                 <div class="project-tags">
                                     <span>Photoshop</span><span>Illustrator</span><span>Composition digitale</span>
                                 </div>
@@ -506,7 +513,7 @@
 
                     <article class="project-details" id="madonna-details">
                         <div class="project-header">
-                            <p class="eyebrow">Design graphique</p>
+                            <p class="section-label">Design graphique</p>
                             <h2>Reinterpretation Album Madonna</h2>
                         </div>
                         <div class="project-content">
@@ -525,7 +532,7 @@
 
                     <article class="project-details" id="logos-details">
                         <div class="project-header">
-                            <p class="eyebrow">Identite visuelle</p>
+                            <p class="section-label">Identite visuelle</p>
                             <h2>Collection de Logos</h2>
                         </div>
                         <div class="project-content">
@@ -546,7 +553,7 @@
 
                     <article class="project-details" id="hitman-details">
                         <div class="project-header">
-                            <p class="eyebrow">Illustration digitale</p>
+                            <p class="section-label">Illustration digitale</p>
                             <h2>Hitman - Illustration</h2>
                         </div>
                         <div class="project-content">
@@ -565,20 +572,19 @@
             </div>
 
             <section id="contact" class="contact section">
-                <div class="container contact-grid">
-                    <div class="contact-copy reveal">
-                        <p class="eyebrow">Une idee en tete ?</p>
-                        <h2>Parlons-en des maintenant.</h2>
+                <div class="container contact-layout">
+                    <div class="contact-poster reveal">
+                        <p class="section-label">Contact</p>
+                        <h2>Si tu veux un site qui a du caractere, on peut le construire ensemble.</h2>
                         <p>
-                            Je suis disponible pour donner vie a vos projets. Contactez-moi pour echanger sur vos besoins,
-                            votre identite visuelle ou votre prochain site web.
+                            Je suis disponible pour des projets de portfolio, vitrine, branding digital ou direction visuelle.
+                            Si tu veux quelque chose de plus fort qu'un simple site propre, ecris-moi.
                         </p>
-
-                        <div class="contact-chips">
-                            <span>UI/UX</span>
-                            <span>Web design</span>
-                            <span>Identite visuelle</span>
-                            <span>Developpement web</span>
+                        <div class="contact-tags">
+                            <span>Branding</span>
+                            <span>UI</span>
+                            <span>Front-end</span>
+                            <span>Illustration</span>
                         </div>
                     </div>
 
@@ -600,12 +606,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Projet</label>
+                                <label for="message">Message</label>
                                 <textarea id="message" name="message" rows="5" placeholder="Decrivez votre idee, votre marque ou votre besoin." minlength="10" maxlength="1000" required></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary">
-                                <span class="button-text">Contactez-moi</span>
+                                <span class="button-text">Envoyer</span>
                                 <span class="button-loading">Envoi en cours...</span>
                             </button>
                             <p class="form-status" role="status" aria-live="polite"></p>
